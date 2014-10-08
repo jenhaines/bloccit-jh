@@ -1,8 +1,10 @@
-## Bloccit: a Reddit clone to teach the fundamentals of web development and Rails 4.
+## bloccit-jh
 
-Made with my mentor at [Bloc](http://bloc.io).
+### a Reddit clone to teach the fundamentals of web development and Rails 4.
 
-Things you may want to cover:
+#### Hosted app [Heroku](http://bloccit-jh.herokuapp.com/)
+
+#### Made with my mentor at [Bloc](http://bloc.io).
 
 * Ruby version
 
@@ -19,8 +21,3 @@ Things you may want to cover:
 * Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
