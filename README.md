@@ -10,7 +10,9 @@
 
 * System dependencies
 
-* Configuration
+* Setup
+
+Reference `**application_example.yml**'` for variables required for **devise** setup variable which are  in `**config/application.yml**`
 
 * Database creation
 
@@ -21,3 +23,5 @@
 * Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
+
+
