@@ -12,7 +12,7 @@ class PostsController < ApplicationController
   end
 
     def create
-      @topic = current_user.topic.build(topic_params)
+      @topic = current_user.topics.build(topic_params)
       @post = current_user.posts.build(post_params)
      authorize @post
      if @post.save
@@ -31,7 +31,7 @@ class PostsController < ApplicationController
   end
 
   def update
-    @topic = current_user.topic.build(topic_params)
+    @topic = current_user.topics.build(topic_params)
       @post = current_user.posts.build(post_params)
      authorize @post
      if @post.update_attributes(params.require(:post).permit(:title, :body))
