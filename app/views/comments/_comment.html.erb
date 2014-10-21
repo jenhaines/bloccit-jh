@@ -1,0 +1,9 @@
+<p>
+  <%= comment.body %>
+  </br>
+  <% if comment.user %>
+    <small>
+      <b><%= comment.user.name %></b>
+    </small>
+  <% end %>
+</p>
