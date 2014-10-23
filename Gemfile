@@ -49,3 +49,7 @@ gem 'will_paginate', '~> 3.0.5'
 gem 'better_errors'
 gem 'binding_of_caller'
 gem 'pry'
+
+group :test do
+  gem 'rspec-rails', '~> 3.1.0'
+end
