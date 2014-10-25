@@ -1,4 +1,5 @@
 class CommentsController < ApplicationController
+
   def create
     @post = Post.find(params[:post_id])
     @comment = @post.comments.new(comment_params)
@@ -13,20 +14,22 @@ class CommentsController < ApplicationController
 
   def destroy
     @post = Post.find(params[:post_id])
-     @comment = @post.comments.find(params[:id])
+    @comment = @post.comments.find(params[:id])
+    authorize @comment
 
-     authorize @comment
-     if @comment.destroy
-       flash[:notice] = "Comment was removed."
-       redirect_to [@post.topic, @post]
-     else
-       flash[:error] = "Comment couldn't be deleted. Try again."
-       redirect_to [@post.topic, @post]
-     end
-   end
+    if @comment.destroy
+      flash[:notice] = "Comment was removed."
+      redirect_to [@post.topic, @post]
+    else
+      flash[:error] = "Comment couldn't be deleted. Try again."
+      redirect_to [@post.topic, @post]
+    end
+  end
 
-private
+  private
+
   def comment_params
     params.require(:comment).permit(:body)
   end
+
 end
