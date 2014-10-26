@@ -1,4 +1,9 @@
  module ApplicationHelper
+
+  def my_name
+    'Jen Haines'
+  end
+
    def form_group_tag(errors, &block)
      if errors.any?
        content_tag :div, capture(&block), class: 'form-group has-error'
