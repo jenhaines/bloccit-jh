@@ -11,6 +11,7 @@ end
 
 group :development do
   gem 'sqlite3'
+
 end
 
 gem 'bootstrap-sass', '~> 3.1.1'
@@ -52,4 +53,5 @@ gem 'pry'
 
 group :test do
   gem 'rspec-rails', '~> 3.1.0'
+  gem 'capybara'
 end
